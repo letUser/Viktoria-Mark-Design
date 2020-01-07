@@ -9,6 +9,30 @@
 	<script src="https://kit.fontawesome.com/8c5f8983b2.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css?family=Noticia+Text|Great+Vibes|Tangerine:400,700&display=swap"
 		rel="stylesheet">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			var scroll_timer;
+			var displayed = false;
+			var $message = $('#message a');
+			var $window = $(window);
+			var top = $(document.body).children(0).position().top;
+			$window.scroll(function () {
+				window.clearTimeout(scroll_timer);
+				scroll_timer = window.setTimeout(function () {
+					if ($window.scrollTop() <= top) {
+						displayed = false;
+						$message.fadeOut(500);
+					} else if (displayed == false) {
+						displayed = true;
+						$message.stop(true, true).show().click(function () {
+							$message.fadeOut(500);
+						});
+					}
+				}, 100);
+			});
+		});
+	</script>
 </head>
 
 <body>
@@ -16,13 +40,15 @@
 		<nav>
 			<input type="checkbox" id="checkbox-menu">
 			<label for="checkbox-menu">
+				<div id="top"></div>
 				<ul class="menu touch">
-					<li><a class="logo" href="#">Viktoria Mark</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Portfolio</a></li>
-					<li><a href="#">How I work</a></li>
-					<li><a class="contacts" href="#">Contact Me</a></li>
-					<li><a href="#">Getting Started</a></li>
+					<li>
+						<p class="logo">Viktoria Mark</p>
+					</li>
+					<li><a href="#aboutMe">About</a></li>
+					<li><a href="#myPortfolio">Portfolio</a></li>
+					<li><a href="#howIwork">How I work</a></li>
+					<li><a class="contacts" href="#bttn">Contact Me</a></li>
 				</ul>
 				<span class="toggle">&#9776;</span>
 			</label>
@@ -42,9 +68,10 @@
 			</div>
 		</section>
 
-		<section class="portfolio wrapper">
-			<div class="portfolio-text">
-				<h2>My Portfolio</h2>
+		<section class="about wrapper">
+			<div class="about-text">
+				<a name="aboutMe"></a>
+				<h2>About Me</h2>
 				<p>Proident officia proident occaecat ad ad quis ad commodo minim. Veniam consequat exercitation magna
 					elit
 					cupidatat adipisicing tempor.
@@ -59,24 +86,24 @@
 					Culpa aute excepteur ipsum nulla quis ut ex mollit amet magna est voluptate exercitation pariatur.
 				</p>
 			</div>
-			<div class="portfolio-num">
-				<div class="portfolio-line">
+			<div class="about-num">
+				<div class="about-line">
 					<div class="square">
-						<span class="portfolio-square">772</span>
+						<span class="about-square">772</span>
 						<span class="square-text">Portfolio</span>
 					</div>
 					<div class="square">
-						<span class="portfolio-square">772</span>
+						<span class="about-square">772</span>
 						<span class="square-text">Portfolio</span>
 					</div>
 				</div>
-				<div class="portfolio-line">
+				<div class="about-line" id="lastline">
 					<div class="square">
-						<span class="portfolio-square">772</span>
+						<span class="about-square">772</span>
 						<span class="square-text">Portfolio</span>
 					</div>
 					<div class="square">
-						<span class="portfolio-square">772</span>
+						<span class="about-square">772</span>
 						<span class="square-text">Portfolio</span>
 					</div>
 				</div>
@@ -85,6 +112,7 @@
 
 		<section class="projects">
 			<div class="wrapper proj">
+				<a name="myPortfolio"></a>
 				<h2>Find Out My Works</h2>
 				<!-- <div class="buttons-search">
 					<form action="">
@@ -134,6 +162,7 @@
 		</section>
 		<section class="steps">
 			<div class="wrapper">
+				<a name="howIwork"></a>
 				<h2>How I work</h2>
 				<p class="steps-text">
 					Sit deserunt pariatur excepteur do aliqua laborum ea.</p>
@@ -169,7 +198,48 @@
 			</div>
 		</section>
 	</main>
-
+	<footer>
+		<div class="wrapper">
+			<div class="footer-block">
+				<div class="footer-logo">
+					<h3>Lorem.</h3>
+					<h3>Lorem, ipsum dolor.</h3>
+				</div>
+				<div class="footer-search">
+					<button class="mailto"><a name="bttn" href="mailto:vika-markelov@mail.ru?subject=Job Offer&amp;"
+							target="_table">Send Me E-Mail</a>
+					</button>
+				</div>
+			</div>
+			<hr>
+			<div class="footer-links">
+				<div class="footer-links-logo">
+					<h4>Lorem.</h4>
+				</div>
+				<div class="footer-link">
+					<p>Lorem.</p>
+					<a href="#">Agents</a>
+					<a href="#">Hunters</a>
+				</div>
+				<div class="footer-link">
+					<p>Lorem.</p>
+					<a href="#">Agents</a>
+					<a href="#">Hunters</a>
+				</div>
+				<div class="footer-link">
+					<p>Lorem.</p>
+					<a href="#">Agents</a>
+					<a href="#">Hunters</a>
+				</div>
+				<div class="footer-link">
+					<p>Lorem.</p>
+					<a href="#">Agents</a>
+					<a href="#">Hunters</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div id="message"><a href="#top">Scroll to top</a></div>
 	<script src="scripts/mainScript.js"></script>
 </body>
 

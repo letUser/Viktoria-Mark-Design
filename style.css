@@ -12,7 +12,6 @@ html {
 nav {
 	margin: 0 auto;
 	width: 100%;
-	max-width: 1200px;
 }
 
 #checkbox-menu,
@@ -47,8 +46,9 @@ nav {
 	color: #FFF;
 }
 
-.menu li a.logo {
+.menu li p.logo {
 	font-size: 45px;
+	color: #FFF;
 	position: relative;
 	margin-right: 10px;
 	padding: 5px 60px;
@@ -104,30 +104,30 @@ nav {
 	margin-right: 60px;
 }
 
-.portfolio {
+.about {
 	display: flex;
 	margin-top: 100px;
 }
 
-.portfolio-num {
+.about-num {
 	margin-top: 100px;
 }
 
-.portfolio-line {
+.about-line {
 	display: flex;
 }
 
-.portfolio-text {
+.about-text {
 	padding-right: 40px;
 }
 
-.portfolio-text h2 {
+.about-text h2 {
 	font-size: 40px;
 	margin-bottom: 40px;
 	margin-top: 40px;
 }
 
-.portfolio-text p {
+.about-text p {
 	font-size: 18px;
 	line-height: 35px;
 	margin-top: 40px;
@@ -142,19 +142,20 @@ nav {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	margin-bottom: 100px;
 }
 
 .square-text {
 	color: #FFF;
 }
 
-.portfolio-square {
+.about-square {
 	font-size: 40px;
 	color: #FFF;
 	margin-bottom: 15px;
 }
 
-.portfolio-text {
+.about-text {
 	font-size: 14px;
 }
 
@@ -166,6 +167,7 @@ nav {
 .proj h2 {
 	margin-bottom: 85px;
 	font-size: 40px;
+	margin-top: -20px;
 }
 
 .card {
@@ -300,7 +302,7 @@ nav {
 }
 
 .steps-container {
-	margin-bottom: 20px;
+	margin-bottom: 100px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -327,6 +329,110 @@ nav {
 	margin-left: 70px;
 	margin-top: 20px;
 	border-bottom: 3px solid #000;
+}
+
+footer {
+	background: #404240;
+	color: #FFF;
+	padding-top: 50px;
+	padding-bottom: 80px;
+}
+
+.footer-block {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-block H3 {
+	font-size: 40px;
+}
+
+.mailto {
+	height: 80%;
+	height: 50px;
+	margin-top: 15px;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+}
+
+.mailto a {
+	text-decoration: none;
+	color: #919eb1;
+	padding: 10px 30px 10px 30px;
+	font-size: 16px;
+}
+
+.mailto:hover {
+	background: #282928;
+}
+
+.mailto:hover a {
+	color: #FFF;
+}
+
+hr {
+	opacity: 0.3;
+	margin-top: 47px;
+	margin-bottom: 70px;
+}
+
+.footer-links {
+	display: flex;
+	justify-content: space-between;
+	padding-right: 90px;
+}
+
+.footer-link {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-lins-logo {
+	font-size: 25px;
+	margin-right: 26%;
+}
+
+.footer-link p {
+	text-transform: uppercase;
+	font-size: 13px;
+	color: #919eb1;
+	margin-bottom: 35px;
+}
+
+.footer-link a {
+	color: #FFF;
+	text-decoration: none;
+	font-size: 13px;
+	margin-bottom: 20px;
+}
+
+.footer-link a:hover {
+	opacity: 0.4;
+}
+
+#message a {
+	display: flex;
+	position: flex-end;
+	display: none;
+	z-index: 999;
+	opacity: .8;
+	position: fixed;
+	top: 100%;
+	margin-top: -80px;
+	left: 50%;
+	margin-left: -9rem;
+	-moz-border-radius: 24px;
+	-webkit-border-radius: 24px;
+	width: 300px;
+	line-height: 43px;
+	height: 48px;
+	padding: 10px;
+	background-color: #5a5c5a;
+	font-size: 22px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
 }
 
 @media screen and (max-width: 320px) {
@@ -382,7 +488,8 @@ nav {
 		visibility: hidden;
 	}
 
-	.menu li a {
+	.menu li a,
+	li p {
 		width: 95%;
 		text-align: center;
 		align-self: center;
@@ -391,7 +498,7 @@ nav {
 		font-size: 16px;
 	}
 
-	.menu li a.logo {
+	.menu li p.logo {
 		font-size: 25px;
 		margin-right: 0px;
 		margin-left: 0;
@@ -406,6 +513,10 @@ nav {
 		margin-top: 0;
 		display: block;
 		max-width: 100%;
+	}
+
+	.intro-img {
+		margin: auto;
 	}
 
 	.intro .intro-text {
@@ -432,35 +543,39 @@ nav {
 		color: #FFF;
 	}
 
-	.portfolio {
+	.about {
 		margin-top: 0;
 		flex-direction: column;
 	}
 
-	.portfolio-text {
+	.about-text {
 		padding: 10px;
 	}
 
-	.portfolio-text h2 {
+	.about-text h2 {
 		font-size: 30px;
 		margin-bottom: 10px;
 		margin-top: 15px;
 	}
 
-	.portfolio-text p {
-		margin-top: 5px;
+	.about-text p {
 		font-size: 13px;
 		line-height: 18px;
-		margin-bottom: 0;
+		margin: 5px auto 0 auto;
+		justify-content: space-around;
 	}
 
-	.portfolio-num {
+	.about-num {
 		margin-top: 20px;
 	}
 
 	.square {
 		height: 100px;
-		margin-top: 0;
+		margin: 20px auto 20px auto;
+	}
+
+	#lastline {
+		margin-bottom: 20px;
 	}
 
 	.projects {
@@ -472,6 +587,7 @@ nav {
 		padding-left: 10px;
 		margin-bottom: 30px;
 		font-size: 30px;
+		margin-top: 10px;
 	}
 
 	.cards {
@@ -511,5 +627,33 @@ nav {
 	.steps h2 {
 		margin-left: 5%;
 		margin-bottom: 15px;
+	}
+
+	.steps h2 {
+		margin-top: 40px;
+	}
+
+	.footer-block {
+		flex-direction: column;
+	}
+
+	.footer-logo h3 {
+		font-size: 25px;
+		text-align: center;
+	}
+
+	.footer-search {
+		display: flex;
+		justify-content: center;
+	}
+
+	.footer-links {
+		flex-wrap: wrap;
+		margin-left: 5%;
+		padding-right: 5%;
+	}
+
+	#message {
+		display: none;
 	}
 }
