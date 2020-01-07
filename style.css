@@ -267,10 +267,74 @@ nav {
 	top: 1400px;
 }
 
+.steps h2 {
+	margin-top: 55px;
+	font-size: 40px;
+	margin-bottom: 35px;
+}
+
+.steps-text {
+	line-height: 27px;
+	font-size: 13px;
+}
+
+.mbtext {
+	margin-bottom: 70px;
+}
+
+.stepblock {
+	width: 350px;
+	height: 380px;
+	background: #FFF;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+}
+
+.stepblock .step-num {
+	font-size: 200px;
+	position: relative;
+	top: -140px;
+	left: -40px;
+}
+
+.stepblock:hover {
+	background: #282928;
+	color: #FFF;
+}
+
+.steps-container {
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.stepblock h4 {
+	font-size: 16px;
+	margin-left: 40px;
+	margin-top: -130px;
+	margin-bottom: 20px;
+}
+
+.stepblock h4 span {
+	margin-right: 15px;
+}
+
+.stepblock .step-info {
+	margin-left: 70px;
+	line-height: 29px;
+}
+
+.stepblock .stepinfolast {
+	display: inline-block;
+	margin-left: 70px;
+	margin-top: 20px;
+	border-bottom: 3px solid #000;
+}
+
 @media screen and (max-width: 320px) {
 	.intro-img {
 		background-position-x: -30px;
-
 	}
 }
 
@@ -419,6 +483,10 @@ nav {
 		justify-items: center;
 	}
 
+	.card:hover {
+		transform: none;
+	}
+
 	.bAll {
 		margin-right: 35px;
 	}
@@ -427,6 +495,22 @@ nav {
 		display: none;
 		visibility: hidden;
 		position: relative;
+	}
+
+	.steps-container {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.stepblock {
+		margin-top: 20px;
+	}
+
+	.steps-text,
+	.steps h2 {
+		margin-left: 5%;
+		margin-bottom: 15px;
 	}
 
 }
