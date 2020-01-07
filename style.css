@@ -12,6 +12,7 @@ html {
 nav {
 	margin: 0 auto;
 	width: 100%;
+	max-width: 1200px;
 }
 
 #checkbox-menu,
@@ -26,7 +27,7 @@ nav {
 	height: 60px;
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: center;
 	list-style-type: none;
 }
@@ -48,14 +49,10 @@ nav {
 
 .menu li a.logo {
 	font-size: 45px;
-	margin-right: 300px;
-	margin-left: 70px;
+	position: relative;
+	margin-right: 10px;
 	padding: 5px 60px;
 	font-family: 'Tangerine', cursive;
-}
-
-.menu li a.contacts {
-	margin-right: 230px;
 }
 
 .wrapper {
@@ -209,7 +206,7 @@ nav {
 	grid-row-gap: 30px;
 }
 
-.projects input[type=text] {
+/* .projects input[type=text] {
 	margin-top: 50px;
 	width: 300px;
 	height: 60px;
@@ -237,7 +234,7 @@ nav {
 	font-size: 16px;
 	outline: 0;
 	border: 0;
-}
+} */
 
 .bAll .all {
 	width: 200px;
@@ -260,12 +257,12 @@ nav {
 	display: flex;
 }
 
-.projects .buttons-search {
+/* .projects .buttons-search {
 	display: flex;
 	position: absolute;
 	left: 1060px;
 	top: 1400px;
-}
+} */
 
 .steps h2 {
 	margin-top: 55px;
@@ -275,7 +272,7 @@ nav {
 
 .steps-text {
 	line-height: 27px;
-	font-size: 13px;
+	font-size: 18px;
 }
 
 .mbtext {
@@ -306,7 +303,7 @@ nav {
 	margin-bottom: 20px;
 	display: flex;
 	justify-content: space-between;
-
+	align-items: center;
 }
 
 .stepblock h4 {
@@ -397,6 +394,8 @@ nav {
 	.menu li a.logo {
 		font-size: 25px;
 		margin-right: 0px;
+		margin-left: 0;
+		padding: 0;
 	}
 
 	.menu li a.contacts {
@@ -501,6 +500,7 @@ nav {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		margin-left: 0;
 	}
 
 	.stepblock {
@@ -512,5 +512,4 @@ nav {
 		margin-left: 5%;
 		margin-bottom: 15px;
 	}
-
 }
