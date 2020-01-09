@@ -12,6 +12,7 @@ html {
 nav {
 	margin: 0 auto;
 	width: 100%;
+	background-color: #282928;
 }
 
 #checkbox-menu,
@@ -20,24 +21,23 @@ nav {
 }
 
 .menu {
-	padding: 0;
-	background-color: #282928;
-	margin: 0;
-	height: 60px;
+	height: 3vw;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	list-style-type: none;
+	margin: 0 20vw 0 18vw;
 }
 
 .menu li a {
 	color: #FFF;
 	text-decoration: none;
 	align-self: center;
-	font-size: 18px;
-	padding: 15px 40px;
+	font-size: 17px;
+	padding: 0.6vw 2vw;
 	transition: background .2s linear;
+	margin: 0;
 }
 
 .menu li a:hover {
@@ -47,11 +47,10 @@ nav {
 }
 
 .menu li p.logo {
-	font-size: 45px;
+	font-size: 40px;
 	color: #FFF;
 	position: relative;
-	margin-right: 10px;
-	padding: 5px 60px;
+	padding: 0 6vw 0 2vw;
 	font-family: 'Tangerine', cursive;
 }
 
@@ -62,23 +61,23 @@ nav {
 }
 
 .intro {
-	margin-top: 25px;
+	margin-top: 1vw;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 }
 
 .intro-img {
 	background-image: url(img/yoda.jpg);
 	width: 409px;
 	height: 585px;
-	margin-right: 320px;
+	margin: 0 17vw 0 18vw;
 }
 
 .intro .intro-text {
 	position: absolute;
-	font-size: 62px;
-	left: 395px;
-	top: 120px;
+	font-size: 60px;
+	left: 21vw;
+	top: 6vw;
 	font-family: 'Great Vibes', cursive;
 }
 
@@ -86,16 +85,16 @@ nav {
 	background-color: #000000af;
 	max-width: 590px;
 	position: absolute;
-	right: 395px;
+	right: 19vw;
 	top: 665px;
 	display: flex;
 	justify-content: space-between;
-	padding: 22px 46px;
+	padding: 1.2vw 2.5vw;
 }
 
 .intro-contacts i {
 	color: #FFF;
-	margin-right: 30px;
+	margin-right: 1vw;
 }
 
 .intro-contacts p {
@@ -358,7 +357,7 @@ footer {
 
 .mailto a {
 	text-decoration: none;
-	color: #919eb1;
+	color: rgb(46, 46, 46);
 	padding: 10px 30px 10px 30px;
 	font-size: 16px;
 }
@@ -441,11 +440,12 @@ hr {
 	}
 }
 
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 420px) {
 	.toggle {
 		clear: both;
 		display: block;
 		text-align: center;
+		align-items: center;
 		font-size: 18px;
 		line-height: 50px;
 		width: 100%;
@@ -478,14 +478,16 @@ hr {
 		background-color: #404240;
 		border-bottom-left-radius: 0;
 		border-bottom-right-radius: 0;
+		margin: 0 0 0 0 !important;
 	}
 
 	.menu li {
 		display: flex;
-		align-self: center;
 		width: 95%;
 		opacity: 0;
 		visibility: hidden;
+		align-items: center;
+		margin-left: 0.2rem;
 	}
 
 	.menu li a,
@@ -499,9 +501,9 @@ hr {
 	}
 
 	.menu li p.logo {
-		font-size: 25px;
-		margin-right: 0px;
-		margin-left: 0;
+		font-size: 34px;
+		margin-right: 0;
+		margin-left: 0.3rem;
 		padding: 0;
 	}
 
@@ -521,15 +523,15 @@ hr {
 
 	.intro .intro-text {
 		position: relative;
-		font-size: 35px;
-		left: 10px;
-		top: 50px;
+		font-size: 37px !important;
+		left: 10px !important;
+		top: 50px !important;
 	}
 
 	.intro .intro-contacts {
 		right: 0;
 		top: -10px;
-		padding: 20px 10px;
+		padding: 20px 20px 20px 20px !important;
 		position: relative;
 	}
 
@@ -655,5 +657,70 @@ hr {
 
 	#message {
 		display: none;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.intro {
+		margin-top: 0;
+		display: block;
+		max-width: 100%;
+	}
+
+	.intro-img {
+		margin: auto;
+	}
+
+	.intro .intro-text {
+		left: 5rem;
+		top: 4rem;
+	}
+
+	.intro .intro-contacts {
+		right: 0;
+		top: -10px;
+		padding: 20px 70px 20px 130px;
+		position: relative;
+	}
+
+	.about {
+		margin-top: 0;
+		flex-direction: column;
+	}
+
+}
+
+@media screen and (max-width: 1260px) {
+	.menu {
+		margin: 0 17vw 0 17vw;
+	}
+
+	.menu li a {
+		padding: 0.3vw 0.8vw;
+		font-size: 14px;
+	}
+
+	.menu li p.logo {
+		font-size: 30px;
+	}
+
+	.intro .intro-text {
+		font-size: 45px;
+	}
+
+	.intro-contacts {
+		top: 590px;
+	}
+
+	.wrapper {
+		margin: 0 auto;
+		max-width: 1000px;
+		width: 100%;
+	}
+
+	.card-container {
+		margin: 0 auto;
+		max-width: 1000px;
+		width: 100%;
 	}
 }
