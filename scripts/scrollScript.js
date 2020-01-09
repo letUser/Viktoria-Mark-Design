@@ -1,9 +1,9 @@
 $(function () {
-    var scroll_timer;
-    var displayed = false;
-    var $message = $('#message a');
-    var $window = $(window);
-    var top = $(document.body).children(0).position().top;
+    let scroll_timer;
+    let displayed = false;
+    let $message = $('#message a');
+    let $window = $(window);
+    let top = $(document.body).children(0).position().top;
     $window.scroll(function () {
         window.clearTimeout(scroll_timer);
         scroll_timer = window.setTimeout(function () {
