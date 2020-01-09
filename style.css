@@ -21,7 +21,7 @@ nav {
 }
 
 .menu {
-	height: 3vw;
+	height: 50px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -473,7 +473,7 @@ hr {
 		flex-direction: column;
 		justify-content: space-around;
 		align-items: center;
-		height: 0px;
+		height: 0px !important;
 		transition: height .3s linear;
 		background-color: #404240;
 		border-bottom-left-radius: 0;
@@ -660,7 +660,13 @@ hr {
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
+
+	.menu {
+		height: 50px;
+		margin: 0;
+	}
+
 	.intro {
 		margin-top: 0;
 		display: block;
@@ -723,4 +729,5 @@ hr {
 		max-width: 1000px;
 		width: 100%;
 	}
+
 }
