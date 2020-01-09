@@ -440,7 +440,7 @@ hr {
 	}
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 745px) {
 	.toggle {
 		clear: both;
 		display: block;
@@ -465,7 +465,7 @@ hr {
 	}
 
 	#checkbox-menu:checked+label .touch {
-		height: 350px;
+		height: 350px !important;
 	}
 
 	.menu {
