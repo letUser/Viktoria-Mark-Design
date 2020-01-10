@@ -21,7 +21,7 @@ nav {
 }
 
 .menu {
-	height: 50px;
+	height: 60px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -106,10 +106,11 @@ nav {
 .about {
 	display: flex;
 	margin-top: 100px;
+	margin-bottom: 60px;
 }
 
 .about-num {
-	margin-top: 100px;
+	margin-top: 110px;
 }
 
 .about-line {
@@ -129,7 +130,12 @@ nav {
 .about-text p {
 	font-size: 18px;
 	line-height: 35px;
-	margin-top: 40px;
+	margin-top: 50px;
+	text-align: justify;
+}
+
+#aboutP2 {
+	margin-top: 80px;
 }
 
 .square {
@@ -140,8 +146,6 @@ nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
-	margin-bottom: 100px;
 }
 
 .square-text {
@@ -160,7 +164,7 @@ nav {
 
 .projects {
 	background-color: #F6F5F4;
-	padding: 60px 0;
+	padding: 40px 0 60px 0;
 }
 
 .proj h2 {
@@ -201,10 +205,11 @@ nav {
 
 .cards {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(1, 1fr);
-	grid-column-gap: 86px;
+	grid-template-columns: repeat(auto-fit, minmax(348px, 3fr));
+	grid-template-rows: repeat(auto-fit, minmax(348px, 12fr));
+	grid-column-gap: 25px;
 	grid-row-gap: 30px;
+	justify-items: center;
 }
 
 /* .projects input[type=text] {
@@ -232,7 +237,7 @@ nav {
 	margin-left: -4px;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
-	font-size: 16px;
+	font-size: 16px;	
 	outline: 0;
 	border: 0;
 } */
@@ -242,7 +247,7 @@ nav {
 	height: 60px;
 	border: none;
 	border-radius: 10px;
-	margin-left: 40px;
+	margin-left: 0;
 	margin-top: 52px;
 	font-size: 15px;
 	background: #282928;
@@ -301,10 +306,13 @@ nav {
 }
 
 .steps-container {
-	margin-bottom: 100px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(348px, 3fr));
+	grid-template-rows: repeat(auto-fit, minmax(348px, 12fr));
+	grid-column-gap: 25px;
+	grid-row-gap: 30px;
+	justify-items: center;
+	margin-bottom: 60px;
 }
 
 .stepblock h4 {
@@ -421,7 +429,7 @@ hr {
 	margin-top: -80px;
 	left: 50%;
 	margin-left: -9rem;
-	-moz-border-radius: 24px;
+	border-radius: 24px;
 	-webkit-border-radius: 24px;
 	width: 300px;
 	line-height: 43px;
@@ -440,7 +448,34 @@ hr {
 	}
 }
 
-@media screen and (max-width: 745px) {
+@media screen and (max-width: 640px) {
+	.about-text p {
+		font-size: 13px;
+		line-height: 18px;
+		margin: 5px auto 0 auto;
+		justify-content: space-around;
+	}
+
+	.about-num {
+		margin-top: 0 !important;
+	}
+
+	.square {
+		height: 170px !important;
+		width: 170px !important;
+		margin: 20px auto 20px auto;
+	}
+
+	.intro .intro-contacts {
+		justify-content: none;
+	}
+
+	.intro-contacts p {
+		font-size: 15px !important;
+	}
+}
+
+@media screen and (max-width: 810px) {
 	.toggle {
 		clear: both;
 		display: block;
@@ -531,8 +566,9 @@ hr {
 	.intro .intro-contacts {
 		right: 0;
 		top: -10px;
-		padding: 20px 20px 20px 20px !important;
+		padding: 20px 10px 20px 10px !important;
 		position: relative;
+		justify-content: space-around;
 	}
 
 	.intro-contacts i {
@@ -540,18 +576,15 @@ hr {
 	}
 
 	.intro-contacts p {
-		font-size: 13px;
+		font-size: 18px;
 		margin-right: 0px;
 		color: #FFF;
+		padding: 0 3vw 0 3vw;
 	}
 
 	.about {
 		margin-top: 0;
 		flex-direction: column;
-	}
-
-	.about-text {
-		padding: 10px;
 	}
 
 	.about-text h2 {
@@ -560,19 +593,11 @@ hr {
 		margin-top: 15px;
 	}
 
-	.about-text p {
-		font-size: 13px;
-		line-height: 18px;
-		margin: 5px auto 0 auto;
-		justify-content: space-around;
-	}
-
 	.about-num {
 		margin-top: 20px;
 	}
 
 	.square {
-		height: 100px;
 		margin: 20px auto 20px auto;
 	}
 
@@ -593,11 +618,7 @@ hr {
 	}
 
 	.cards {
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-		grid-template-rows: repeat(3, 1fr);
-		grid-row-gap: 10px;
-		justify-items: center;
+		grid-row-gap: 30px;
 	}
 
 	.card:hover {
@@ -612,17 +633,6 @@ hr {
 		display: none;
 		visibility: hidden;
 		position: relative;
-	}
-
-	.steps-container {
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		margin-left: 0;
-	}
-
-	.stepblock {
-		margin-top: 20px;
 	}
 
 	.steps-text,
@@ -694,6 +704,33 @@ hr {
 		flex-direction: column;
 	}
 
+	.about-text {
+		padding: 10px;
+	}
+
+	.about-line {
+		display: flex;
+		justify-content: center;
+	}
+
+	.about-num {
+		margin-top: 20px;
+	}
+
+	.square {
+		height: 250px;
+		width: 250px;
+		margin: 20px auto 20px auto;
+	}
+
+	.steps-container {
+		grid-row-gap: 10px;
+	}
+
+	.stepblock {
+		margin-top: 20px;
+	}
+
 }
 
 @media screen and (max-width: 1260px) {
@@ -702,7 +739,7 @@ hr {
 	}
 
 	.menu li a {
-		padding: 0.3vw 0.8vw;
+		padding: 8px 10px;
 		font-size: 14px;
 	}
 
@@ -716,15 +753,20 @@ hr {
 
 	.intro-contacts {
 		top: 590px;
+		max-width: 1260px;
+	}
+
+	.about-text p {
+		font-size: 18px;
+		line-height: 35px;
+		margin-top: 40px;
+	}
+
+	#aboutP2 {
+		margin-top: 40px;
 	}
 
 	.wrapper {
-		margin: 0 auto;
-		max-width: 1000px;
-		width: 100%;
-	}
-
-	.card-container {
 		margin: 0 auto;
 		max-width: 1000px;
 		width: 100%;
