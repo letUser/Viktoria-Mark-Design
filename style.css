@@ -110,7 +110,7 @@ nav {
 }
 
 .about-num {
-	margin-top: 110px;
+	margin-top: 60px;
 }
 
 .about-line {
@@ -124,13 +124,12 @@ nav {
 .about-text h2 {
 	font-size: 40px;
 	margin-bottom: 40px;
-	margin-top: 40px;
 }
 
 .about-text p {
 	font-size: 18px;
 	line-height: 35px;
-	margin-top: 50px;
+	margin-top: 30px;
 	text-align: justify;
 }
 

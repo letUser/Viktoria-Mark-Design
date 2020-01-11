@@ -1,6 +1,12 @@
-new Vue({
-    el: '.cards',
+var vm = new Vue({
+    el: '.cards-back',
     data: {
-        show: true
+       show:true,
+       styleobj :{
+          fontSize:'30px',
+          color:'red'
+       }
+    },
+    methods : {
     }
-})
+ });

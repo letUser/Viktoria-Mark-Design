@@ -141,50 +141,52 @@
 						</div>
 					</div>
 				</div>
-				<div class="cards-back">
-					<div class="card">
-						<img src="img/FTPrsWFFBlE.jpg" alt="">
-						<div class="card-container">
-							<p>Est ipsum aliquip proident ex sit.</p>
-							<div class="card-info">
-								<div class="info">
-									<span><i class="fas fa-paint-brush"></i>
-										<p>Viktoria Mark</p>
-									</span>
+				<transition name="fade-in">
+					<div class="cards-back" v-show="show" v-bind:style="style">
+						<div class="card">
+							<img src="img/FTPrsWFFBlE.jpg" alt="">
+							<div class="card-container">
+								<p>Est ipsum aliquip proident ex sit.</p>
+								<div class="card-info">
+									<div class="info">
+										<span><i class="fas fa-paint-brush"></i>
+											<p>Viktoria Mark</p>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<img src="img/FTPrsWFFBlE.jpg" alt="">
+							<div class="card-container">
+								<p>Est ipsum aliquip proident ex sit.</p>
+								<div class="card-info">
+									<div class="info">
+										<span><i class="fas fa-paint-brush"></i>
+											<p>Viktoria Mark</p>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<img src="img/FTPrsWFFBlE.jpg" alt="">
+							<div class="card-container">
+								<p>Est ipsum aliquip proident ex sit.</p>
+								<div class="card-info">
+									<div class="info">
+										<span><i class="fas fa-paint-brush"></i>
+											<p>Viktoria Mark</p>
+										</span>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="card">
-						<img src="img/FTPrsWFFBlE.jpg" alt="">
-						<div class="card-container">
-							<p>Est ipsum aliquip proident ex sit.</p>
-							<div class="card-info">
-								<div class="info">
-									<span><i class="fas fa-paint-brush"></i>
-										<p>Viktoria Mark</p>
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="card">
-						<img src="img/FTPrsWFFBlE.jpg" alt="">
-						<div class="card-container">
-							<p>Est ipsum aliquip proident ex sit.</p>
-							<div class="card-info">
-								<div class="info">
-									<span><i class="fas fa-paint-brush"></i>
-										<p>Viktoria Mark</p>
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				</transition>
 			</div>
 			<div class="bAll">
-				<button class="all" onclick="showAllCards()">View All Works</button>
+				<button class="all" v-on:click="show = !show" onclick="showAllCards()">View All Works</button>
 			</div>
 		</section>
 
