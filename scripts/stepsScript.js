@@ -26,7 +26,3 @@ stpbl3.onmouseover = () =>
 
 stpbl3.onmouseout = () =>
 	stpbrdr3.style.borderBottom = "3px solid black";
-
-function showAllCards() {
-	document.querySelector('.cards').classList.add('active');
-}
