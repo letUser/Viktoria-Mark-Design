@@ -166,7 +166,7 @@ nav {
 .proj h2 {
 	margin-bottom: 60px;
 	font-size: 40px;
-	margin-top: -20px;
+	margin-top: -5px;
 }
 
 .card {
@@ -191,6 +191,13 @@ nav {
 
 .card-info .info span:first-child {
 	margin-right: 18px;
+}
+
+.card-info .info span p {
+	font-family: 'Tangerine', cursive;
+	font-size: 30px;
+	position: relative;
+	display: inline-block;
 }
 
 .card:hover {
@@ -306,7 +313,7 @@ nav {
 } */
 
 .steps h2 {
-	margin-top: 55px;
+	margin-top: 25px;
 	font-size: 40px;
 	margin-bottom: 35px;
 }
@@ -364,6 +371,7 @@ nav {
 .stepblock .step-info {
 	margin-left: 70px;
 	line-height: 29px;
+	max-width: 250px;
 }
 
 .stepblock .stepinfolast {
@@ -645,7 +653,7 @@ hr {
 
 	.projects {
 		background-color: #F6F5F4;
-		padding: 60px 0;
+		padding: 40px 0;
 	}
 
 	.proj h2 {
@@ -660,9 +668,9 @@ hr {
 		grid-row-gap: 30px;
 	}
 
-	.cards-back .active {
+	.cards-back.active {
 		grid-template-columns: repeat(auto-fit, minmax(322px, 3fr));
-		grid-template-rows: repeat(auto-fit, minmax(322px, 3fr));
+		grid-template-rows: repeat(auto-fit, minmax(322px, 12fr));
 		grid-row-gap: 30px;
 	}
 
@@ -686,6 +694,20 @@ hr {
 	.steps h2 {
 		margin-top: 20px;
 		font-size: 30px;
+	}
+
+	.stepblock h4 {
+		margin-left: 10%;
+	}
+
+	.stepblock .step-info {
+		margin-left: 10%;
+		max-width: 250px;
+		text-align: justify;
+	}
+
+	.stepblock .stepinfolast {
+		margin-left: 10%;
 	}
 
 	.footer-block {
