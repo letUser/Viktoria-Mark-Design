@@ -9,26 +9,24 @@ let stpbrdr2 = document.getElementById("stepbrdr2");
 let stpbl3 = document.getElementById("stepbl3");
 let stpbrdr3 = document.getElementById("stepbrdr3");
 
-stpbl1.onmouseover = function () {
+stpbl1.onmouseover = () =>
 	stpbrdr1.style.borderBottom = "3px solid white";
-};
 
-stpbl1.onmouseout = function () {
+stpbl1.onmouseout = () =>
 	stpbrdr1.style.borderBottom = "3px solid black";
-};
 
-stpbl2.onmouseover = function () {
+stpbl2.onmouseover = () =>
 	stpbrdr2.style.borderBottom = "3px solid white";
-};
 
-stpbl2.onmouseout = function () {
+stpbl2.onmouseout = () =>
 	stpbrdr2.style.borderBottom = "3px solid black";
-};
 
-stpbl3.onmouseover = function () {
+stpbl3.onmouseover = () =>
 	stpbrdr3.style.borderBottom = "3px solid white";
-};
 
-stpbl3.onmouseout = function () {
+stpbl3.onmouseout = () =>
 	stpbrdr3.style.borderBottom = "3px solid black";
-};
+
+function showAllCards() {
+	document.querySelector('.cards').classList.add('active');
+}

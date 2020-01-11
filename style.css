@@ -168,7 +168,7 @@ nav {
 }
 
 .proj h2 {
-	margin-bottom: 85px;
+	margin-bottom: 60px;
 	font-size: 40px;
 	margin-top: -20px;
 }
@@ -205,11 +205,16 @@ nav {
 
 .cards {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(348px, 3fr));
-	grid-template-rows: repeat(auto-fit, minmax(348px, 12fr));
+	grid-template-columns: minmax(348px, 3fr);
+	grid-template-rows: minmax(348px, maxcontent);
 	grid-column-gap: 25px;
 	grid-row-gap: 30px;
 	justify-items: center;
+}
+
+.cards.active {
+	grid-template-columns: repeat(auto-fit, minmax(348px, 3fr));
+	grid-template-rows: repeat(auto-fit, minmax(348px, 12fr));
 }
 
 /* .projects input[type=text] {
@@ -263,6 +268,26 @@ nav {
 	display: flex;
 }
 
+.all:hover {
+	background: #ffffff;
+	color: #000;
+	border: 2px solid #000;
+	cursor: pointer;
+}
+
+.slide-fade-enter-active {
+	transition: all .3s ease;
+}
+
+.slide-fade-leave-active {
+	transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.slide-fade-enter, .slide-fade-leave-active {
+	transform: translateX(10px);
+	opacity: 0;
+}
+
 /* .projects .buttons-search {
 	display: flex;
 	position: absolute;
@@ -312,7 +337,7 @@ nav {
 	grid-column-gap: 25px;
 	grid-row-gap: 30px;
 	justify-items: center;
-	margin-bottom: 60px;
+	margin-bottom: 80px;
 }
 
 .stepblock h4 {
@@ -420,18 +445,17 @@ hr {
 
 #message a {
 	display: flex;
-	position: flex-end;
 	display: none;
 	z-index: 999;
 	opacity: .8;
 	position: fixed;
+	align-self: center;
 	top: 100%;
+	left: 41.5%;
 	margin-top: -80px;
-	left: 50%;
-	margin-left: -9rem;
 	border-radius: 24px;
 	-webkit-border-radius: 24px;
-	width: 300px;
+	width: 305px;
 	line-height: 43px;
 	height: 48px;
 	padding: 10px;
