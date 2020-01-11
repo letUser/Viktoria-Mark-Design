@@ -158,10 +158,6 @@ nav {
 	margin-bottom: 15px;
 }
 
-.about-text {
-	font-size: 14px;
-}
-
 .projects {
 	background-color: #F6F5F4;
 	padding: 40px 0 60px 0;
@@ -282,6 +278,10 @@ nav {
 	color: #000;
 	border: 2px solid #000;
 	cursor: pointer;
+}
+
+.bAll.hidden {
+	display: none;
 }
 
 .slide-fade-enter-active {
@@ -621,10 +621,14 @@ hr {
 		flex-direction: column;
 	}
 
+	.about-text p {
+		margin-top: 20px !important;
+	}
+
 	.about-text h2 {
 		font-size: 30px;
-		margin-bottom: 10px;
 		margin-top: 15px;
+		margin-bottom: 0;
 	}
 
 	.about-num {
@@ -641,26 +645,29 @@ hr {
 
 	.projects {
 		background-color: #F6F5F4;
-		padding: 20px 0;
+		padding: 60px 0;
 	}
 
 	.proj h2 {
 		padding-left: 10px;
 		margin-bottom: 30px;
 		font-size: 30px;
-		margin-top: 10px;
 	}
 
-	.cards {
+	.cards-face {
+		grid-template-columns: repeat(auto-fit, minmax(322px, 3fr));
+		grid-template-rows: repeat(auto-fit, minmax(322px, 3fr));
+		grid-row-gap: 30px;
+	}
+
+	.cards-back .active {
+		grid-template-columns: repeat(auto-fit, minmax(322px, 3fr));
+		grid-template-rows: repeat(auto-fit, minmax(322px, 3fr));
 		grid-row-gap: 30px;
 	}
 
 	.card:hover {
 		transform: none;
-	}
-
-	.bAll {
-		margin-right: 35px;
 	}
 
 	.projects .buttons-search {
@@ -671,12 +678,14 @@ hr {
 
 	.steps-text,
 	.steps h2 {
-		margin-left: 5%;
+		margin-left: 2.5%;
 		margin-bottom: 15px;
+		padding: 0 !important;
 	}
 
 	.steps h2 {
-		margin-top: 40px;
+		margin-top: 20px;
+		font-size: 30px;
 	}
 
 	.footer-block {
@@ -757,8 +766,20 @@ hr {
 		margin: 20px auto 20px auto;
 	}
 
+	.projects h2 {
+		padding: 0 10px 0 10px;
+	}
+
 	.steps-container {
 		grid-row-gap: 10px;
+	}
+
+	.steps h2 {
+		padding: 0 10px 0 10px;
+	}
+
+	.steps-text {
+		padding: 0 10px 0 10px;
 	}
 
 	.stepblock {
