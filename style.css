@@ -85,7 +85,7 @@ nav {
 	background-color: #000000af;
 	max-width: 590px;
 	position: absolute;
-	right: 19vw;
+	right: 20.8vw;
 	top: 665px;
 	display: flex;
 	justify-content: space-between;
@@ -410,6 +410,8 @@ footer {
 	color: rgb(46, 46, 46);
 	padding: 10px 30px 10px 30px;
 	font-size: 16px;
+	outline: none;
+	border: none;
 }
 
 .mailto:hover {
