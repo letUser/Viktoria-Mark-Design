@@ -228,36 +228,6 @@ nav {
 	padding: 30px 0 0 0;
 }
 
-/* .projects input[type=text] {
-	margin-top: 50px;
-	width: 300px;
-	height: 60px;
-	border: none;
-	background-image: url(img/search.png);
-	background-repeat: no-repeat;
-	background-position: 27px;
-	outline: none;
-	padding-left: 62px;
-	font-size: 15px;
-	color: #919eb9;
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
-}
-
-.projects input[type=submit] {
-	width: 115px;
-	border: none;
-	height: 60px;
-	background: #000000af;
-	color: #FFF;
-	margin-left: -4px;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
-	font-size: 16px;	
-	outline: 0;
-	border: 0;
-} */
-
 .bAll .all {
 	width: 200px;
 	height: 60px;
@@ -289,27 +259,6 @@ nav {
 .bAll.hidden {
 	display: none;
 }
-
-.slide-fade-enter-active {
-	transition: all .3s ease;
-}
-
-.slide-fade-leave-active {
-	transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-
-.slide-fade-enter,
-.slide-fade-leave-active {
-	transform: translateX(10px);
-	opacity: 0;
-}
-
-/* .projects .buttons-search {
-	display: flex;
-	position: absolute;
-	left: 1060px;
-	top: 1400px;
-} */
 
 .steps h2 {
 	margin-top: 25px;
@@ -399,7 +348,7 @@ footer {
 .mailto {
 	height: 80%;
 	height: 50px;
-	margin-top: 15px;
+	margin-top: 1.3vw;
 	border-radius: 5px;
 	outline: none;
 	border: none;
@@ -729,6 +678,10 @@ hr {
 		flex-wrap: wrap;
 		margin-left: 5%;
 		padding-right: 5%;
+	}
+
+	.mailto {
+		margin-top: 30px;
 	}
 
 	#message {
